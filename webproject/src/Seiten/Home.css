@@ -1,0 +1,75 @@
+:root {
+    --primary: #F5F5DC;
+}
+
+.title {
+    max-width: 800px;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title h1 {
+    font-size: 65px;
+    color: white;
+    font-weight: bold;
+    letter-spacing:3px;
+}
+
+.title h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.title p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+.button_produkte {
+    border: white solid 1px;
+    background-color: transparent;
+    font-size: 18px;
+    color: white;
+    padding: 10px 50px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.button_produkte:hover{
+    padding: 6px 18px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease-out;
+    background-color: transparent;
+    color: #ffffff;
+}
+.button_überuns {
+    border: white solid 1px;
+    background-color: transparent;
+    font-size: 18px;
+    color: white;
+    padding: 10px 50px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.button_überuns:hover{
+    padding: 6px 18px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease-out;
+    background-color: transparent;
+    color: #ffffff;
+}
+

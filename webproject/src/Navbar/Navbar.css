@@ -1,0 +1,43 @@
+.nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: wheat;
+  width: 100%;
+  min-height: 8vh;
+  align-items: center;
+}
+
+.bar{
+  display: flex;
+  color: wheat;
+  width: 50%;
+}
+
+.component {
+  display: flex;
+  justify-content: space-around;
+  color: wheat;
+  font-weight: bold;
+  width: 50%;
+}
+
+.links {
+  display: flex;
+  color: #8B4513;
+  justify-content: space-around;
+  list-style: none;
+  width: 60%;
+}
+
+.logo{
+  display: flex;
+  color: #8B4513;
+  font-size: 35px;
+}
+
+.logo h4 {
+  padding-left: 8px;
+  margin-left: 6px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
