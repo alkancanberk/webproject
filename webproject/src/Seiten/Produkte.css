@@ -1,0 +1,90 @@
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100%;
+    justify-content: center;
+}  
+
+.card-box{
+    width: 300px;
+    overflow: hidden;
+    margin: 30px;
+    max-height: 40vh;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+.card-box:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px -5px;
+}
+
+.card-image {
+    overflow: hidden;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.card-grid > div {
+    flex-basis: calc(30% - 40px);
+}
+
+.card-description{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e8e8ee;
+    margin: 1rem 2rem;
+    margin-top: 0.5rem;
+}
+
+.card-name{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-top: 7px;
+
+}
+
+.card-button{
+    background-color: wheat;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: auto;
+}
+
+.fa-shopping-cart{
+    color: #8B4513;
+    font-size: larger;
+}
+
+.card_button:hover{
+    background:blanchedalmond;
+}
+  
+.card-stars{
+    color: #FFD700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-right: 2px;
+}
+
+.card-stars{
+    color: #FFD700;
+    margin-right: 2px;
+}
+
+.card-rating{
+    margin-left: 6px;
+    color: black;
+    font-style: italic;
+}
+
