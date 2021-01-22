@@ -1,82 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../App.css";
 import "./Produkte.css";
 
-export default class Produkte extends Component {
-  constructor() {
-    super();
-    this.state = {
-      box: [
-        {
-          image:
-            "",
-          name: "Kaffee Orginal",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "Espresso",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "Cappucino",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-        {
-          image:
-            "",
-          name: "test",
-          description: "test",
-        },
-      ],
-    };
-  }
-  render() {
 
-    return (
+
+function Produkte(props) {
+  const items = props.productLists;
+  const cartList = props.cartLists;
+
+  const addToCart = (item) => {
+    props.setCarts([...cartList, item]);
+  };
+
+  return (
+    <>
       <div className="card-grid">
-        {this.state.box.map((item) => {
+        {/*Die Daten aus productList bzw. Liste.jsx werden mit dieser Funktion gemappt und in diesem Card Layout ausgegeben*/}
+        {items.map((item, key) => {
           return (
-            <div className="card-box">
+            <div className="card-box" key={key}>
               <img className="card-image" src={item.image} />
               <div className="card-content">
                 <h3 className="card-name">{item.name}</h3>
@@ -91,7 +33,7 @@ export default class Produkte extends Component {
                   </div>
                   <div className="card-rating">Bewertungen</div>
                 </div>
-                <button className="card-button">
+                <button className="card-button" onClick={() => addToCart(item)}> 
                   <div className="fas fa-shopping-cart"></div>
                 </button>
               </div>
@@ -99,6 +41,8 @@ export default class Produkte extends Component {
           );
         })}
       </div>
-    );
-  }
+    </>
+  );
 }
+
+export default Produkte
