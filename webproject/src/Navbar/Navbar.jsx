@@ -5,7 +5,11 @@ import "./Navbar.css";
 
 
 //Navigationsleiste mit Attributen und einem Button für den Warenkorb
-const Navbar = () => {
+const Navbar = (props) => {
+  const itemCount = props.cartLists; 
+  {/*Da der Button in der Navbar eine einzelne Komponente ist, muss dieser an Button.jsx weitergegeben werden.*/}
+
+
   return (
     <nav className="nav">
       <div className="logo">
@@ -17,23 +21,23 @@ const Navbar = () => {
       <ul className="bar">
         <li className="component">
           <Link to="/home" className="links">
-            Home
+            <h3>Home</h3>
           </Link>
         </li>
 
         <li className="component">
           <Link to="/produkte" className="links">
-            Produkte
+            <h3>Produkte</h3>
           </Link>
         </li>
 
         <li className="component">
           <Link to="/services" className="links">
-            Services
+            <h3>Services</h3>
           </Link>
         </li>
       </ul>
-      <Button />
+      <Button itemCounts={itemCount} />
     </nav>
   );
 };

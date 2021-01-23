@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
-import "./Produkte.css";
+import './Produkte.css'
 
 
 
@@ -9,13 +9,14 @@ function Produkte(props) {
   const cartList = props.cartLists;
 
   const addToCart = (item) => {
-    props.setCarts([...cartList, item]);
+    props.setCarts([...cartList, { ...item }]);
   };
 
+  
   return (
     <>
       <div className="card-grid">
-        {/*Die Daten aus productList bzw. Liste.jsx werden mit dieser Funktion gemappt und in diesem Card Layout ausgegeben*/}
+        {/*Die Daten aus productList bzw. Liste.jsx werden mit der map-Funktion über dieses Card-Layout gemappt und ausgegeben.*/}
         {items.map((item, key) => {
           return (
             <div className="card-box" key={key}>
@@ -33,7 +34,7 @@ function Produkte(props) {
                   </div>
                   <div className="card-rating">Bewertungen</div>
                 </div>
-                <button className="card-button" onClick={() => addToCart(item)}> 
+                <button className="card-button" onClick={() => addToCart(item)}>
                   <div className="fas fa-shopping-cart"></div>
                 </button>
               </div>

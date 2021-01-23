@@ -1,0 +1,65 @@
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr ;
+    grid-auto-rows: 400px;
+    margin: 10%;
+}
+
+
+.grid-box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px;
+    background-color: white;
+    border: 5px solid gray;
+    border-radius: 10px;
+}
+
+.grid-image {
+    height: 300px;
+    display: flex;
+    align-self: center;
+    margin-left: 50px;
+}
+
+
+.grid-name{
+    display: flex;
+    align-self: center;
+}
+
+
+.grid-line{
+    display: flex;
+    align-self: center;
+}
+
+
+.grid-description{
+    display: flex;
+    align-self: center;
+}
+
+
+.grid-button{
+    display: flex;
+    border: none;
+    background-color: white;
+    font-size: 3rem;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+
+.fa-trash{
+    color: #CD5C5C;
+}
+
+
+.fa-trash:hover{
+    color: red;
+}

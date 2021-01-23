@@ -1,34 +1,31 @@
 import React from 'react'
-import './Produkte.css'
+import './Warenkorb.css'
 
 export default function Warenkorb(props) {
-    const items = props.cartLists
-    console.log(items)
-    return (
-      <>
-        <div className="card-grid">
+  const items = props.cartLists;
+
+  //deleteItem entfernt mit bei einem onClick den jeweiligen Artikel aus dem Warenkorb
+  const deleteItem = (itemToDelete) => {
+    props.setCarts(items.filter((item) => item !== itemToDelete));
+  };
+
+  return (
+    <>
+      <div className="back">
+        <div className="grid">
           {items.map((item, key) => (
-            <div className="card-box" key={key}>
-              <img className="card-image" src={item.image} />
-              <div className="card-content">
-                <h3 className="card-name">{item.name}</h3>
-                <p className="card-description">{item.description}</p>
-                <div class="card-stars">
-                  <div>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                  </div>
-                  <div className="card-rating">Bewertungen</div>
-                </div>
-              </div>
+            <div className="grid-box" key={key}>
+              <img className="grid-image" src={item.image} />
+              <h1 className="grid-name">{item.name}</h1>
+              <h1 className="grid-line">|</h1>
+              <h1 className="grid-description">{item.description}</h1>
+              <button className="grid-button" onClick={() => deleteItem(item)}>
+                <div className="fa fa-trash"></div>
+              </button>
             </div>
           ))}
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
-
-

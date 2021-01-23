@@ -13,7 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar  cartLists={cart.length} /> {/*Wird an die Navbar übergeben um die Anzahl der Items im Warenkorb anzeigen zu lassen*/}
       <Switch>
         <Route path="/home" exact component={Home} />
         <Route path="/warenkorb" component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
