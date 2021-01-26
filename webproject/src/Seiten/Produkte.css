@@ -16,7 +16,7 @@
     border-radius: 25px;
 }
 .card-box:hover{
-    transform: scale(1.1);
+    transform: scaleX(1.1);
     box-shadow: 0px 0px 15px -5px;
 }
 
@@ -67,6 +67,7 @@
 
 .card-button:hover{
     background:blanchedalmond;
+    transform: scale(1.1);
 }
   
 .card-stars{

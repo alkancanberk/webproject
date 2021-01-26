@@ -6,6 +6,7 @@ import Warenkorb from "./Seiten/Warenkorb";
 import Produkte from "./Seiten/Produkte";
 import productList from './Seiten/Liste'
 import React, { useState } from "react";
+import Checkout from "./Seiten/Checkout";
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" exact component={Home} />
         <Route path="/warenkorb" component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
         <Route path="/produkte" component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
+        <Route path="/checkout" component={Checkout} />
       </Switch>
     </BrowserRouter>
   );

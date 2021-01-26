@@ -1,23 +1,29 @@
 
-
 .grid {
     display: grid;
     grid-template-columns: 2fr ;
-    grid-auto-rows: 400px;
-    margin: 10%;
+    grid-auto-rows: 350px;
+    
+}
+
+
+.flex-layout{
+    display: flex;
+    justify-content: center;
 }
 
 
 .grid-box{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     margin: 30px;
     background-color: white;
-    border: 5px solid gray;
+    border: 3px solid gray;
     border-radius: 10px;
 }
+
 
 .grid-image {
     height: 300px;
@@ -55,6 +61,11 @@
 }
 
 
+.grid-button:hover{
+    transform: scale(0.9);
+}
+
+
 .fa-trash{
     color: #CD5C5C;
 }
@@ -62,4 +73,27 @@
 
 .fa-trash:hover{
     color: red;
+}
+
+.header{
+    display: flex;
+    font-size: 3rem;
+    justify-content: space-between;
+}
+
+
+.article{
+    display: flex;
+    align-self: center;
+    grid-auto-rows: 40px;
+    margin-left: 17rem;
+}
+
+.checkout{
+    font-size: 3rem;
+    border: none;
+    background-color: white;
+    align-self: center;
+    grid-auto-columns: 40px;
+    margin-right: 17rem;
 }
