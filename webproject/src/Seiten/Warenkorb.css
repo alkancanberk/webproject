@@ -86,7 +86,7 @@
     display: flex;
     align-self: center;
     grid-auto-rows: 40px;
-    margin-left: 17rem;
+    margin-left: 13rem;
 }
 
 .checkout{
@@ -95,5 +95,5 @@
     background-color: white;
     align-self: center;
     grid-auto-columns: 40px;
-    margin-right: 17rem;
+    margin-right: 7rem;
 }
