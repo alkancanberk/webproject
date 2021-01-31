@@ -5,10 +5,10 @@ import './Checkout.css'
 export default class Checkout extends Component {
   state = {
     Vorname: "",
-    Nachname: " ",
-    Ort: " ",
-    StraßeHausnummer: " ",
-    Email: " ",
+    Nachname: "",
+    Ort: "",
+    StraßeHausnummer: "",
+    Email: "",
   };
 
   //Durch diese Funktion wird der state mit der aktuellen Eingabe des Benutzers für zum Beispiel den Vornamen aktualisiert
@@ -20,10 +20,9 @@ export default class Checkout extends Component {
 
   render() {
     return (
-      <form className="grid-box">
+      <form className="box">
         <div>
           <div>
-            <label className="label">Vorname</label>
             <input
               className="grid-layer"
               name="Vorname"
@@ -33,7 +32,6 @@ export default class Checkout extends Component {
             />
           </div>
           <div>
-            <label className="label">Nachname</label>
             <input
               className="grid-layer"
               name="Nachname"
@@ -43,7 +41,6 @@ export default class Checkout extends Component {
             />
           </div>
           <div>
-            <label className="label">Ort</label>
             <input
               className="grid-layer"
               name="Ort"
@@ -53,9 +50,8 @@ export default class Checkout extends Component {
             />
           </div>
           <div>
-            <label className="label">Straße und Hausnummer</label>
             <input
-              className="grid-layer1"
+              className="grid-layer"
               name="StraßeHausnummer"
               placeholder="Straße und Hausnummer"
               value={this.state.StraßeHausnummer}
@@ -63,17 +59,18 @@ export default class Checkout extends Component {
             />
           </div>
           <div>
-            <label className="label">Email</label>
             <input
-              className="grid-layer1"
+              className="grid-layer"
               name="Email"
               placeholder="E-Mail"
               value={this.state.Mail}
               onChange={(event) => this.replace(event)}
             />
-            <div>
+            <div className="position">
               <Link to="/home">
-                <button>Bestätigen</button>
+                <button className="submit">
+                  <div class="fas fa-check"></div>
+                </button>
               </Link>
             </div>
           </div>
