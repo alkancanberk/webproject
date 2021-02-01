@@ -13,7 +13,9 @@ function Home() {
           <Link to="/produkte">
             <button className="button_produkte">PRODUKTE</button>
           </Link>
-          <button className="button_überuns">ÜBER UNS</button>
+          <Link to="/services">
+            <button className="button_services">SERVICES</button>
+          </Link>
         </div>
       </div>
     </div>

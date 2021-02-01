@@ -13,7 +13,7 @@ const Navbar = (props) => {
   return (
     <nav className="nav">
       <div className="logo">
-        <Link to="/" className="logo">
+        <Link to="/home" className="logo">
           <i className="fas fa-coffee"></i>
         </Link>
         <h4>Kaffeetastisch</h4>

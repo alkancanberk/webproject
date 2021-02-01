@@ -1,0 +1,45 @@
+.service_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+
+.service_layout{
+    display: grid;
+    text-align: center;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.service_header{
+    text-align: center;
+    margin-top: 3rem;
+    font-style: italic;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+
+.service_content{
+    text-align: center;
+    font-size: x-large;
+    margin: 20px;
+    font-style: italic;
+}
+
+
+.fa-arrow-right{
+    margin: 2rem;
+    color: green;
+}
+
+
+.service_icons{
+    font-size: 4rem;
+    margin-top: 5px;
+}

@@ -59,7 +59,7 @@
 }
 
 
-.button_überuns {
+.button_services {
     border: white solid 1px;
     background-color: transparent;
     font-size: 18px;
@@ -71,7 +71,7 @@
 }
 
 
-.button_überuns:hover{
+.button_services:hover{
     border-radius: 5px;
     border: 2px solid var(--primary);
     background-color: wheat;

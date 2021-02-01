@@ -7,6 +7,7 @@ import Produkte from "./Seiten/Produkte";
 import productList from './Seiten/Liste'
 import React, { useState } from "react";
 import Checkout from "./Seiten/Checkout";
+import Services from "./Seiten/Services";
 
 function App() {
   
@@ -16,10 +17,11 @@ function App() {
     <BrowserRouter>
       <Navbar  cartLists={cart.length} /> {/*Wird an die Navbar übergeben um die Anzahl der Items im Warenkorb anzeigen zu lassen*/}
       <Switch>
-        <Route path="/home" exact component={Home} />
-        <Route path="/warenkorb" component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
-        <Route path="/produkte" component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
-        <Route path="/checkout" component={Checkout} />
+        <Route path="/home"  component={Home} />
+        <Route path="/services"  component={Services} />
+        <Route path="/warenkorb"  component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
+        <Route path="/produkte"  component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
+        <Route path="/checkout"  component={Checkout} />
       </Switch>
     </BrowserRouter>
   );

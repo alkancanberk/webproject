@@ -18,12 +18,12 @@ export default function Warenkorb(props) {
           <header className="header">
             <div className="article">Artikel:</div>
             <Link to="/checkout" className="checkout">
-            <button className="checkout">
-              <div>
-                <i class="fas fa-door-open"></i>
-              </div>
-              Checkout
-            </button>
+              <button className="checkout">
+                <div>
+                  <i class="fas fa-door-open"></i>
+                </div>
+                Checkout
+              </button>
             </Link>
           </header>
           {items.map((item, key) => (
