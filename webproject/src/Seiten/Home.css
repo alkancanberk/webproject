@@ -3,7 +3,7 @@
 }
 
 
-.title {
+.homeTitle {
     max-width: 800px;
     height: 92vh;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 
-.title h1 {
+.homeTitle h1 {
     font-size: 65px;
     color: white;
     font-weight: bold;
@@ -22,7 +22,7 @@
 }
 
 
-.title h2 {
+.homeTitle h2 {
     font-size: 30px;
     color: white;
     font-weight: lighter;
@@ -30,7 +30,7 @@
     letter-spacing: 4px;
 }
 
-.title p {
+.homeTitle p {
     font-size: 18px;
     color: white;
     text-align: center;
@@ -39,8 +39,8 @@
 }
 
 
-.button_produkte {
-    border: white solid 1px;
+.buttonProducts {
+    border: white solid 2px;
     background-color: transparent;
     font-size: 18px;
     color: white;
@@ -51,7 +51,7 @@
 }
 
 
-.button_produkte:hover{
+.buttonProducts:hover{
     border-radius: 5px;
     border: 2px solid var(--primary);
     background-color: wheat;
@@ -59,8 +59,8 @@
 }
 
 
-.button_services {
-    border: white solid 1px;
+.buttonServices {
+    border: white solid 2px;
     background-color: transparent;
     font-size: 18px;
     color: white;
@@ -71,7 +71,7 @@
 }
 
 
-.button_services:hover{
+.buttonServices:hover{
     border-radius: 5px;
     border: 2px solid var(--primary);
     background-color: wheat;

@@ -20,11 +20,11 @@ export default class Checkout extends Component {
 
   render() {
     return (
-      <form className="box">
+      <form className="checkoutBox">
         <div>
           <div>
             <input
-              className="grid-layer"
+              className="checkoutLayer"
               name="Vorname"
               placeholder="Vorname"
               value={this.state.Vorname}
@@ -33,7 +33,7 @@ export default class Checkout extends Component {
           </div>
           <div>
             <input
-              className="grid-layer"
+              className="checkoutLayer"
               name="Nachname"
               placeholder="Nachname"
               value={this.state.Nachname}
@@ -42,7 +42,7 @@ export default class Checkout extends Component {
           </div>
           <div>
             <input
-              className="grid-layer"
+              className="checkoutLayer"
               name="Ort"
               placeholder="Ort"
               value={this.state.Ort}
@@ -51,7 +51,7 @@ export default class Checkout extends Component {
           </div>
           <div>
             <input
-              className="grid-layer"
+              className="checkoutLayer"
               name="StraßeHausnummer"
               placeholder="Straße und Hausnummer"
               value={this.state.StraßeHausnummer}
@@ -60,15 +60,15 @@ export default class Checkout extends Component {
           </div>
           <div>
             <input
-              className="grid-layer"
+              className="checkoutLayer"
               name="Email"
               placeholder="E-Mail"
               value={this.state.Mail}
               onChange={(event) => this.replace(event)}
             />
-            <div className="position">
-              <Link to="/home">
-                <button className="submit">
+            <div className="checkoutPosition">
+              <Link to="/">
+                <button className="checkoutSubmit">
                   <div class="fas fa-check"></div>
                 </button>
               </Link>

@@ -17,11 +17,11 @@ function App() {
     <BrowserRouter>
       <Navbar  cartLists={cart.length} /> {/*Wird an die Navbar übergeben um die Anzahl der Items im Warenkorb anzeigen zu lassen*/}
       <Switch>
-        <Route path="/home"  component={Home} />
-        <Route path="/services"  component={Services} />
-        <Route path="/warenkorb"  component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
-        <Route path="/produkte"  component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
-        <Route path="/checkout"  component={Checkout} />
+        <Route path="/" exact component={Home}/>
+        <Route path="/services" exact component={Services} />
+        <Route path="/warenkorb" exact component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
+        <Route path="/produkte" exact component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
+        <Route path="/checkout" exact component={Checkout} />
       </Switch>
     </BrowserRouter>
   );

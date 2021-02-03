@@ -1,5 +1,5 @@
 
-.grid {
+.cartGrid {
     display: grid;
     grid-template-columns: 2fr ;
     grid-auto-rows: 350px;
@@ -7,16 +7,16 @@
 }
 
 
-.flex-layout{
+.cartLayout{
     display: flex;
     justify-content: center;
 }
 
 
-.grid-box{
+.cartBox{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     overflow: hidden;
     margin: 30px;
     background-color: white;
@@ -25,7 +25,7 @@
 }
 
 
-.grid-image {
+.cartImage {
     height: 300px;
     display: flex;
     align-self: center;
@@ -33,35 +33,42 @@
 }
 
 
-.grid-name{
+.cartName{
     display: flex;
     align-self: center;
+    font-size: 25px;
+    font-weight: lighter;
 }
 
 
-.grid-line{
+.cartLine{
     display: flex;
     align-self: center;
+    font-size: 25px;
+    font-weight: lighter;
 }
 
 
-.grid-description{
+.cartDescription{
     display: flex;
     align-self: center;
+    font-size: 25px;
+    font-weight: lighter;
 }
 
 
-.grid-button{
+.cartButton{
     display: flex;
     border: none;
     background-color: white;
     font-size: 3rem;
     align-self: center;
     margin-right: 1rem;
+    outline: none;
 }
 
 
-.grid-button:hover{
+.cartButton:hover{
     transform: scale(0.9);
 }
 
@@ -75,21 +82,22 @@
     color: red;
 }
 
-.header{
+
+.cartHeader{
     display: flex;
     font-size: 3rem;
     justify-content: space-between;
 }
 
 
-.article{
+.cartArticle{
     display: flex;
     align-self: center;
     grid-auto-rows: 40px;
     margin-left: 13rem;
 }
 
-.checkout{
+.cartCheckout{
     font-size: 3rem;
     border: none;
     background-color: white;

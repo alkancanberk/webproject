@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="home">
-      <div className="title">
+      <div className="homeTitle">
         <h1>Kaffeetastisch</h1>
         <h2>Der volle Kaffee Geschmack</h2>
         <p>Probiere nun die Kaffeebohnen mit dem erlesensten Geschmack!</p>
-        <div className="title_buttons">
+        <div>
           <Link to="/produkte">
-            <button className="button_produkte">PRODUKTE</button>
+            <button className="buttonProducts">PRODUKTE</button>
           </Link>
           <Link to="/services">
-            <button className="button_services">SERVICES</button>
+            <button className="buttonServices">SERVICES</button>
           </Link>
         </div>
       </div>

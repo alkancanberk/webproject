@@ -12,19 +12,18 @@ function Produkte(props) {
     props.setCarts([...cartList, { ...item }]);
   };
 
-  
   return (
     <>
-      <div className="card-grid">
+      <div className="cardGrid">
         {/*Die Daten aus productList bzw. Liste.jsx werden mit der map-Funktion über dieses Card-Layout gemappt und ausgegeben.*/}
         {items.map((item, key) => {
           return (
-            <div className="card-box" key={key}>
-              <img className="card-image" src={item.image} />
-              <div className="card-content">
-                <h3 className="card-name">{item.name}</h3>
-                <p className="card-description">{item.description}</p>
-                <div class="card-stars">
+            <div className="cardBox" key={key}>
+              <img className="cardImage" src={item.image} />
+              <div className="cardContent">
+                <h3 className="cardName">{item.name}</h3>
+                <p className="cardDescription">{item.description}</p>
+                <div class="cardStars">
                   <div>
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
@@ -32,9 +31,9 @@ function Produkte(props) {
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
                   </div>
-                  <div className="card-rating">Bewertungen</div>
+                  <div className="cardRating">Bewertungen</div>
                 </div>
-                <button className="card-button" onClick={() => addToCart(item)}>
+                <button className="cardButton" onClick={() => addToCart(item)}>
                   <div className="fas fa-shopping-cart"></div>
                 </button>
               </div>
