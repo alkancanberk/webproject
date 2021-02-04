@@ -6,14 +6,34 @@ import { Link } from "react-router-dom";
 export default function Warenkorb(props) {
   const items = props.cartLists;
 
-  //deleteItem entfernt mit bei einem onClick den jeweiligen Artikel aus dem Warenkorb
+  //deleteItem entfernt mit bei einem onClick die komplette Anzahl des Artikel das im Warenkorb befindlich ist
   const deleteItem = (itemToDelete) => {
     props.setCarts(items.filter((item) => item !== itemToDelete));
   };
 
+  //increment erhöht die Anzahl des Artikels um 1 und ist in einem Button integriert
+  const increment = (index) => {
+    const newItems = [...items];
+    let incrementItemIndex = newItems.findIndex(
+      (item) => item.name === index.name
+    );
+    newItems[incrementItemIndex].count += 1;
+    props.setCarts(newItems);
+  };
+
+  //decrement senkt die Anzahl des Artikels um 1 und ist in einem Button integriert
+  const decrement = (index) => {
+    const newItems = [...items];
+    let decrementItemIndex = newItems.findIndex(
+      (item) => item.name === index.name
+    );
+    newItems[decrementItemIndex].count -= 1;
+    props.setCarts(newItems);
+  };
+
   //addTotal enthält die Summe der in dem Warenkorb befindlichen Produkte, indem mittels reduce-Funktion "accumulator" mit dem aktuellen Wert addiert wird
   var addTotal = items.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue.description;
+    return accumulator + currentValue.description * currentValue.count;
   }, 0);
 
   return (
@@ -41,6 +61,9 @@ export default function Warenkorb(props) {
                 <button className="cartButton" onClick={() => deleteItem(item)}>
                   <div className="fa fa-trash"></div>
                 </button>
+                <button onClick={() => increment(item)}>+</button>
+                <button onClick={() => decrement(item)}>-</button>
+                <p>Anzahl: {item.count}</p>
               </div>
             </div>
           ))}

@@ -8,8 +8,28 @@ function Produkte(props) {
   const items = props.productLists;
   const cartList = props.cartLists;
 
-  const addToCart = (item) => {
-    props.setCarts([...cartList, { ...item }]);
+  const addToCart = (itemToCheck) => {
+
+    //Kopie der Liste wird erstellt um im Folgenden bearbeitet werden zu können
+    let newCartItems = [...cartList];
+
+    let newItemIndex = newCartItems.findIndex(
+      (item) => item.name === itemToCheck.name //Abgleich mit dem Namen
+    );
+
+    if (newItemIndex < 0) {
+      newCartItems.push({ ...itemToCheck, count: 1 }); 
+      //Sollte der Index kleiner 0 für dieses bestimmte Item sein, so wird es hinzugefügt
+    } else {
+      const newItem = {
+        ...newCartItems[newItemIndex],
+      };
+      newItem.count += 1;
+      newCartItems[newItemIndex] = newItem;
+      //Sollte dieses Item bereits im Warenkorb vorhanden sein, wird nur noch die Anzahl erhöht
+      //Bei vorhandenen Items erhöht sich somit die Anzahl um 1 pro Klick
+    }
+    props.setCarts([...newCartItems]); //Bearbeitete Kopie wird ausgegeben
   };
 
   return (
