@@ -1,8 +1,8 @@
 
 .cartGrid {
     display: grid;
-    grid-template-columns: 2fr ;
-    grid-auto-rows: 350px;
+    grid-template-columns: 2fr  ;
+    grid-auto-rows: 300px;
     
 }
 
@@ -14,19 +14,26 @@
 
 
 .cartBox{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
     width: 70%;
     overflow: hidden;
     margin: 30px;
     background-color: white;
-    border: 3px solid gray;
+    border: 2px solid gray;
     border-radius: 10px;
+}
+
+.cartButtons{
+    display: flex;
+    align-self: center;
+    margin-right: 1rem;
+    justify-self: end;
 }
 
 
 .cartImage {
-    height: 300px;
+    height: 200px;
     display: flex;
     align-self: center;
     margin-left: 50px;
@@ -36,24 +43,19 @@
 .cartName{
     display: flex;
     align-self: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: lighter;
 }
 
 
-.cartLine{
-    display: flex;
-    align-self: center;
-    font-size: 25px;
-    font-weight: lighter;
-}
 
 
 .cartDescription{
     display: flex;
     align-self: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: lighter;
+    justify-self: center;
 }
 
 
@@ -61,7 +63,7 @@
     display: flex;
     border: none;
     background-color: white;
-    font-size: 3rem;
+    font-size: 2.3rem;
     align-self: center;
     margin-right: 1rem;
     outline: none;
@@ -85,23 +87,108 @@
 
 .cartHeader{
     display: flex;
-    font-size: 3rem;
     justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.cartLine{
+    margin: 1rem;
+}
+
+.cartSumTop{
+    font-size: 20px;
+    display: flex;
+    align-self: center;
+    margin-left: 7rem;
+    justify-content: center;
 }
 
 
 .cartArticle{
+    font-size: 20px;
     display: flex;
     align-self: center;
-    grid-auto-rows: 40px;
-    margin-left: 13rem;
+    margin-left: 4rem;
+    justify-content: center;
 }
 
-.cartCheckout{
-    font-size: 3rem;
-    border: none;
+
+.cartCheckout {
+    border-radius: 15px;
+    padding: 0.5rem;
     background-color: white;
+    outline: none;
+    font-size: larger;
+    margin-right: 4rem;
+    border-color: black;
+}
+
+
+.cartCheckout:hover{
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.cartIncrement{
     align-self: center;
-    grid-auto-columns: 40px;
-    margin-right: 7rem;
+    background-color: transparent;
+    font-size: 30px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    color:black;
+    outline:none;
+    margin-left: 3rem;
+}
+
+.cartIncrement:hover{
+    background-color: green;
+    transition: 0.2s;
+    color: white;
+}
+
+.cartDecrement{
+    align-self: center;
+    background-color: transparent;
+    font-size: 30px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    color:black;
+    outline:none;
+    margin-right: 3rem;
+}
+
+
+.cartDecrement:hover{
+    background-color: red;
+    transition: 0.2s;
+    color: white;
+}
+
+
+.cartCount{
+    display: grid;
+    background-color: white;
+    margin: 1rem;
+   
+    justify-self: center;
+    vertical-align: middle;
+}
+
+
+.cartFooter{
+    display: flex;
+    justify-content:flex-end;
+    align-self: center;
+}
+
+
+.cartSum{
+    margin-right: 1rem;
+    align-self: center;
 }

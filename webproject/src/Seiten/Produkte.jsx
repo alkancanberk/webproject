@@ -9,17 +9,16 @@ function Produkte(props) {
   const cartList = props.cartLists;
 
   const addToCart = (itemToCheck) => {
-
     //Kopie der Liste wird erstellt um im Folgenden bearbeitet werden zu können
     let newCartItems = [...cartList];
 
     let newItemIndex = newCartItems.findIndex(
-      (item) => item.name === itemToCheck.name //Abgleich mit dem Namen
+      (item) => item.name === itemToCheck.name //Herausfinden vom Index und Abgleich mit dem Namen
     );
 
     if (newItemIndex < 0) {
       newCartItems.push({ ...itemToCheck, count: 1 }); 
-      //Sollte der Index kleiner 0 für dieses bestimmte Item sein, so wird es hinzugefügt
+      //Sollte der Index kleiner 0 für dieses bestimmte Item sein (also nicht gefunden), so wird es hinzugefügt
     } else {
       const newItem = {
         ...newCartItems[newItemIndex],
@@ -42,7 +41,7 @@ function Produkte(props) {
               <img className="cardImage" src={item.image} />
               <div className="cardContent">
                 <h3 className="cardName">{item.name}</h3>
-                <p className="cardDescription">{item.description}</p>
+                <p className="cardDescription">{item.description} €</p>
                 <div class="cardStars">
                   <div>
                     <i className="fas fa-star"></i>

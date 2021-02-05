@@ -27,12 +27,18 @@
   justify-content: space-around;
   list-style: none;
   width: 60%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
 
 .logo{
   display: flex;
   color: #8B4513;
   font-size: 35px;
+}
+.fa-coffee{
+  color: #8B4513;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .logo h4 {
@@ -40,4 +46,5 @@
   margin-left: 6px;
   letter-spacing: 2px;
   font-weight: lighter;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

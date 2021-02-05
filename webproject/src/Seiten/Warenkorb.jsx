@@ -39,36 +39,56 @@ export default function Warenkorb(props) {
   return (
     <>
       <div>
+        <header className="cartHeader">
+          <div className="cartArticle">Artikel:</div>
+          <div className="cartSumTop">Summe: {addTotal} €</div>
+          <Link to="/checkout">
+            <button className="cartCheckout">Checkout</button>
+          </Link>
+        </header>
+        <hr className="cartLine"></hr>
         <div className="cartGrid">
-          <header className="cartHeader">
-            <div className="cartArticle">Artikel:</div>
-            <Link to="/checkout" className="cartCheckout">
-              <button className="cartCheckout">
-                <div>
-                  <i class="fas fa-door-open"></i>
-                </div>
-                Checkout
-              </button>
-            </Link>
-          </header>
           {items.map((item, key) => (
             <div className="cartLayout">
               <div className="cartBox" key={key}>
                 <img className="cartImage" src={item.image} />
                 <h1 className="cartName">{item.name}</h1>
-                <h1 className="cartLine">|</h1>
-                <h1 className="cartDescription">{item.description}</h1>
-                <button className="cartButton" onClick={() => deleteItem(item)}>
-                  <div className="fa fa-trash"></div>
-                </button>
-                <button onClick={() => increment(item)}>+</button>
-                <button onClick={() => decrement(item)}>-</button>
-                <p>Anzahl: {item.count}</p>
+
+                <h1 className="cartDescription">{item.description} €</h1>
+                <div className="cartButtons">
+                  <button
+                    className="cartIncrement"
+                    onClick={() => increment(item)}
+                  >
+                    +
+                  </button>
+                  <p className="cartCount">x {item.count}</p>
+                  <button
+                    className="cartDecrement"
+                    onClick={() => decrement(item)}
+                  >
+                    -
+                  </button>
+                  <button
+                    className="cartButton"
+                    onClick={() => deleteItem(item)}
+                    title="Artikel entfernen"
+                  >
+                    <div className="fa fa-trash"></div>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
-          <div>Summe: {addTotal}</div>
         </div>
+        <hr className="cartLine"></hr>
+        <div className="cartFooter">
+          <div className="cartSum">Summe: {addTotal} €</div>
+          <Link to="/checkout">
+            <button className="cartCheckout">Checkout</button>
+          </Link>
+        </div>
+        <hr className="cartLine"></hr>
       </div>
     </>
   );

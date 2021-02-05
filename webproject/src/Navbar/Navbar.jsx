@@ -6,16 +6,14 @@ import "./Navbar.css";
 
 //Navigationsleiste mit Attributen und einem Button für den Warenkorb
 const Navbar = (props) => {
-  const itemCount = props.cartLists; 
+  const ItemInCart = props.cartLists; 
   {/*Da der Button in der Navbar eine einzelne Komponente ist, muss dieser an Button.jsx weitergegeben werden.*/}
 
 
   return (
     <nav className="nav">
       <div className="logo">
-        <Link to="/" className="logo">
-          <i className="fas fa-coffee"></i>
-        </Link>
+        <Link to="/" className="fas fa-coffee"></Link>
         <h4>Kaffeetastisch</h4>
       </div>
       <ul className="bar">
@@ -37,7 +35,7 @@ const Navbar = (props) => {
           </Link>
         </li>
       </ul>
-      <Button itemCounts={itemCount} />
+      <Button ItemInCart={ItemInCart} />
     </nav>
   );
 };

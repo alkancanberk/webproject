@@ -12,10 +12,10 @@ import Services from "./Seiten/Services";
 function App() {
   
   const [cart, setCart] = useState([])
-
+  
   return (
     <BrowserRouter>
-      <Navbar  cartLists={cart.length} /> {/*Wird an die Navbar übergeben um die Anzahl der Items im Warenkorb anzeigen zu lassen*/}
+      <Navbar  cartLists={cart} /> {/*Wird an die Navbar übergeben um die Anzahl der Items im Warenkorb anzeigen zu lassen*/}
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/services" exact component={Services} />

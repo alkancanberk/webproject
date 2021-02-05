@@ -1,31 +1,40 @@
-:root {
-    --primary: #F5F5DC;
-}
-
-.button{
-  color: #8B4513;
-  font-size: 19px;
+.counterbutton{
+  color: black;
+  font-size: 22px;
   padding: 8px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   outline: 0;
-  border: 2px solid transparent;
-  box-shadow: 0px 2px 2px lightgray;
+  border: 2px solid black;
   cursor: pointer;
-  background-color: var(--primary);
+  background-color: transparent;
+  display: flex;
+  height: 45px;
 }
 
-.button:hover{
+.counterbutton:hover{
   padding: 8px 20px;
-  border-radius: 5px;
-  border: 2px solid var(--primary);
+  border-radius: 20px;
+  border: 2px solid li;
   transition: all 0.3s ease-out;
-  background-color: transparent;
-  color: #8B4513;
+  background-color: white;
+  color: black;
   }
   
 
 .fa-shopping-cart{
-  padding-right: 10px;
+  margin-right: 10px;
+  color: black;
+  font-size: x-large;
+}
+
+.cartCounter{
+  background-color: transparent;
+  color: white;
+  position: relative;
+  font-size: 16px;
+  bottom: 23px;
+  left:2.5px; 
+  z-index:2;
 }
 
  
