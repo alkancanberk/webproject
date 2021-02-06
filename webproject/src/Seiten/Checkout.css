@@ -1,23 +1,68 @@
-.checkoutBox{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 92vh;
-    background: rgba(0,0,0,0.8);
+.checkoutContainer{
+    display:grid;
+    background: rgb(92, 58, 33);
     grid-template-rows: minmax(100vh, 1fr);
-}   
+   
+}
 
 
-.checkoutLayer{
+.checkoutContent{
     display: grid;
-    margin: 1rem;
-    font-size: 3rem;
-    border-radius: 5px;
-    border: none;
-    background: transparent;
-    border-bottom: 2px solid white;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    font-size: small;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 40%;
+    grid-auto-rows: 50px;
+    grid-template-columns: center;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+
+.checkoutName{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+}
+
+
+.checkoutDescription{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+
+.checkoutCount{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+
+.checkoutSum{
+    display: flex;
+    justify-content: center;
+    margin-top:2rem;
+    color: white;
+}
+
+
+.checkoutArticle{
+    display: flex;
+    justify-content: center;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    color: white;
+}
+
+
+.formLayout{
+    margin-top: 6rem;
 }
 
 
@@ -25,14 +70,54 @@
     color: white
 }
 
+
 input, select, textarea{
     color: white;
 }
 
 
-.checkoutPosition{
+.formLayout h4{
     display: flex;
     justify-content: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+
+.checkoutFormOne{
+    display: flex;
+    justify-content: center;
+}
+
+
+.checkoutLayer{
+    display:flex;
+    justify-content: center;
+}
+
+
+.checkoutFormTwo{
+    display: flex;
+    justify-content: center;
+}
+
+
+.checkoutFormThree{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+
+.checkoutLayer{
+    display: grid;
+    margin: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid white;
 }
 
 
@@ -40,26 +125,53 @@ input, select, textarea{
     display: flex;
     justify-content: center;
     align-self: center;
-    font-size: 3rem;
+    font-size: 2rem;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: wheat;
     border: 2px solid transparent;
-    color: black;
+    color:  rgb(92, 58, 33);
     cursor: pointer;
-    margin-top: 10px;
-    width: 7rem;
+    width: 14rem;
+    
 }
 
 
 .checkoutSubmit:hover{
     border-radius: 5px;
     background-color: transparent;
-    color: turquoise;
-    border: 2px solid greenyellow;
+    color: wheat;
+    border: 2px solid wheat;
 }
 
 
-.fa-check{
-    color:greenyellow
+.moreDetailsButton{
+    display: grid;
+    grid-template-columns: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    color: rgb(92, 58, 33);
+    outline: 0;
+    cursor: pointer;
+    background-color: wheat;
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    
 }
+
+.moreDetailsButton:hover{
+    background-color: transparent;
+    color: wheat
+}
+
+
+.fa-angle-double-down{
+    font-size: 20px;
+}
+
+
+
+
+
 

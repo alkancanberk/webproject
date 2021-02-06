@@ -21,7 +21,7 @@ function App() {
         <Route path="/services" exact component={Services} />
         <Route path="/warenkorb" exact component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
         <Route path="/produkte" exact component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
-        <Route path="/checkout" exact component={Checkout} />
+        <Route path="/checkout" component={(props) => <Checkout {...props} cartLists={cart} setCarts={setCart} />} />
       </Switch>
     </BrowserRouter>
   );

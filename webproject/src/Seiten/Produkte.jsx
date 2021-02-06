@@ -13,7 +13,7 @@ function Produkte(props) {
     let newCartItems = [...cartList];
 
     let newItemIndex = newCartItems.findIndex(
-      (item) => item.name === itemToCheck.name //Herausfinden vom Index und Abgleich mit dem Namen
+      (item) => item.name === itemToCheck.name //Herausfinden vom Index durch den Abgleich mit dem Namen
     );
 
     if (newItemIndex < 0) {
