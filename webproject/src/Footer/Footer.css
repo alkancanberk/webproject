@@ -1,0 +1,36 @@
+.footer{
+    display: flex; 
+    width: 100%;
+    min-height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+  
+.footerUL{
+    display: flex;
+    color: wheat;
+    width: 50%;
+    justify-content: center;
+}
+  
+
+.footerComponent {
+    display: flex;
+    justify-content: space-around;
+    color: wheat;
+    font-weight: bold;
+    width: 50%;
+}
+
+
+.footerComponent h3{
+    font-size: small;
+}
+
+  
+.footerLinks {
+    display: flex;
+    color: black;
+}

@@ -1,4 +1,4 @@
-.nav{
+.navbar{
   display: flex;
   justify-content: space-around;
   background-color: wheat;
@@ -7,13 +7,15 @@
   align-items: center;
 }
 
-.bar{
+
+.navbarUL{
   display: flex;
   color: wheat;
   width: 50%;
 }
 
-.component {
+
+.navComponent {
   display: flex;
   justify-content: space-around;
   color: wheat;
@@ -21,13 +23,13 @@
   width: 50%;
 }
 
-.links {
+
+.navLinks {
   display: flex;
   color: #8B4513;
   justify-content: space-around;
   list-style: none;
   width: 60%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -36,10 +38,13 @@
   color: #8B4513;
   font-size: 35px;
 }
-.fa-coffee{
+
+
+.logoBrown{
   color: #8B4513;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
 
 .logo h4 {
   padding-left: 8px;

@@ -11,26 +11,26 @@ const Navbar = (props) => {
 
 
   return (
-    <nav className="nav">
+    <nav className="navbar">
       <div className="logo">
-        <Link to="/" className="fas fa-coffee"></Link>
+        <Link to="/" className="fas fa-coffee logoBrown"></Link>
         <h4>Kaffeetastisch</h4>
       </div>
-      <ul className="bar">
-        <li className="component">
-          <Link to="/" className="links">
+      <ul className="navbarUL">
+        <li className="navComponent">
+          <Link to="/" className="navLinks">
             <h3>Home</h3>
           </Link>
         </li>
 
-        <li className="component">
-          <Link to="/produkte" className="links">
+        <li className="navComponent">
+          <Link to="/produkte" className="navLinks">
             <h3>Produkte</h3>
           </Link>
         </li>
 
-        <li className="component">
-          <Link to="/services" className="links">
+        <li className="navComponent">
+          <Link to="/services" className="navLinks">
             <h3>Services</h3>
           </Link>
         </li>

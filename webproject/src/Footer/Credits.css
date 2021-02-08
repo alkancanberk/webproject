@@ -1,0 +1,23 @@
+.creditsLayout{
+    margin: 4rem
+}
+
+.creditsLayoutTag{
+   font-size: x-large;
+}
+
+
+.creditsLayoutTagTwo{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.creditsLinks{
+    list-style-type: circle;
+}
+
+
+.creditsSource{
+    margin-bottom: 2rem;
+}

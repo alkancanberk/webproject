@@ -30,7 +30,7 @@
 }
 
 
-.checkoutDescription{
+.checkoutPrice{
     display: flex;
     align-self: center;
     justify-content: center;
@@ -160,13 +160,14 @@ input, select, textarea{
     
 }
 
+
 .moreDetailsButton:hover{
     background-color: transparent;
     color: wheat
 }
 
 
-.fa-angle-double-down{
+.check{
     font-size: 20px;
 }
 

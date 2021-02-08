@@ -35,11 +35,11 @@ export default class Checkout extends Component {
       displayContent: !this.state.displayContent, //entspricht dem Gegenteil von this.state.displayContent => also "true"
     });
   }
-
+  
   render() {
     //Funktion zum Anzeigen des Gesamtpreises
     var addTotal = this.items.reduce(function (accumulator, currentValue) {
-      return accumulator + currentValue.description * currentValue.count;
+      return accumulator + currentValue.price * currentValue.count;
     }, 0);
 
     const { displayContent } = this.state;
@@ -55,24 +55,24 @@ export default class Checkout extends Component {
                 >
                   <div>
                     <div>Bestelldetails</div>
-                    <div className="fas fa-angle-double-down"></div>
+                    <div className="fas fa-angle-double-down check"></div>
                   </div>
                 </button>
               </div>
               {displayContent === true ? (
-                <div>
+                <div  className = "buttonBox">
                   <div className="checkoutArticle">Artikel:</div>
                   {this.items.map((item, key) => (
                     <div className="checkoutContent" key={key}>
                       <div className="checkoutName">{item.name}</div>
-                      <div className="checkoutDescription">
-                        {item.description} €
-                      </div>
+                      <div className="checkoutPrice">{item.price} €</div>
                       <div className="checkoutCount">x {item.count}</div>
                     </div>
                   ))}
                   <div className="checkoutHeader">
-                    <div className="checkoutSum">Summe: {addTotal} €</div>
+                    <div className="checkoutSum">
+                      Summe: {addTotal.toFixed(2)} €
+                    </div>
                   </div>
                 </div>
               ) : (

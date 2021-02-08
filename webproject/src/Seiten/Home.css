@@ -19,6 +19,7 @@
     color: white;
     font-weight: bold;
     letter-spacing:3px;
+    text-shadow: -3px 0  #8B4513, 0 3px  #8B4513, 3px 0  #8B4513, 0 -3px  #8B4513;
 }
 
 
@@ -28,6 +29,7 @@
     font-weight: lighter;
     text-align: center;
     letter-spacing: 4px;
+    text-shadow: -3px 0  #8B4513, 0 3px  #8B4513, 3px 0  #8B4513, 0 -3px  #8B4513;
 }
 
 .homeTitle p {
@@ -36,14 +38,15 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 50px;
+    text-shadow: -3px 0  #8B4513, 0 3px  #8B4513, 3px 0  #8B4513, 0 -3px  #8B4513;
 }
 
 
 .buttonProducts {
     border: white solid 2px;
-    background-color: transparent;
+    background-color: wheat;
     font-size: 18px;
-    color: white;
+    color: black;
     padding: 10px 50px;
     margin: 0 10px;
     cursor: pointer;
@@ -54,16 +57,16 @@
 .buttonProducts:hover{
     border-radius: 5px;
     border: 2px solid var(--primary);
-    background-color: wheat;
-    color: black;
+    background-color: transparent;
+    color: white;
 }
 
 
 .buttonServices {
     border: white solid 2px;
-    background-color: transparent;
+    background-color: wheat;
     font-size: 18px;
-    color: white;
+    color: black;
     padding: 10px 50px;
     margin: 0 10px;
     cursor: pointer;
@@ -74,7 +77,6 @@
 .buttonServices:hover{
     border-radius: 5px;
     border: 2px solid var(--primary);
-    background-color: wheat;
-    color: black;
+    background-color: transparent;
+    color: white;
 }
-

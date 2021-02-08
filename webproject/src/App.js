@@ -8,6 +8,8 @@ import productList from './Seiten/Liste'
 import React, { useState } from "react";
 import Checkout from "./Seiten/Checkout";
 import Services from "./Seiten/Services";
+import Footer from "./Footer/Footer"
+import Credits from "./Footer/Credits"
 
 function App() {
   
@@ -22,7 +24,9 @@ function App() {
         <Route path="/warenkorb" exact component={(props) => <Warenkorb {...props} cartLists={cart} setCarts={setCart} />} />
         <Route path="/produkte" exact component={(props) => <Produkte {...props} productLists={productList} cartLists={cart} setCarts={setCart} />} />
         <Route path="/checkout" component={(props) => <Checkout {...props} cartLists={cart} setCarts={setCart} />} />
+        <Route path="/credits" exact component={Credits}/>
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
 };

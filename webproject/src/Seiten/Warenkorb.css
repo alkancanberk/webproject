@@ -1,4 +1,3 @@
-
 .cartGrid {
     display: grid;
     grid-template-columns: 2fr  ;
@@ -48,9 +47,7 @@
 }
 
 
-
-
-.cartDescription{
+.cartPrice{
     display: flex;
     align-self: center;
     font-size: 20px;
@@ -91,9 +88,11 @@
     margin-top: 2rem;
 }
 
+
 .cartLine{
     margin: 1rem;
 }
+
 
 .cartSumTop{
     font-size: 20px;
@@ -133,6 +132,7 @@
     transition: 0.3s;
 }
 
+
 .cartIncrement{
     align-self: center;
     background-color: transparent;
@@ -145,11 +145,13 @@
     margin-left: 3rem;
 }
 
+
 .cartIncrement:hover{
     background-color: green;
     transition: 0.2s;
     color: white;
 }
+
 
 .cartDecrement{
     align-self: center;
@@ -191,4 +193,33 @@
 .cartSum{
     margin-right: 1rem;
     align-self: center;
+}
+
+
+.cartEmpty{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+
+.cartEmptyTag{
+    display: grid;
+    justify-content: center;
+}
+
+
+.emptyArrow{
+    display: flex;
+    justify-content: center;
+    font-size: 7rem;
+    margin-top: 3rem;
+}
+
+
+.cartEmptyImage{
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }

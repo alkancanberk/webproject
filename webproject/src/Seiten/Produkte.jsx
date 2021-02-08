@@ -41,7 +41,7 @@ function Produkte(props) {
               <img className="cardImage" src={item.image} />
               <div className="cardContent">
                 <h3 className="cardName">{item.name}</h3>
-                <p className="cardDescription">{item.description} €</p>
+                <p className="cardPrice">{item.price} €</p>
                 <div class="cardStars">
                   <div>
                     <i className="fas fa-star"></i>
@@ -53,7 +53,7 @@ function Produkte(props) {
                   <div className="cardRating">Bewertungen</div>
                 </div>
                 <button className="cardButton" onClick={() => addToCart(item)}>
-                  <div className="fas fa-shopping-cart"></div>
+                  <div className="fas fa-shopping-cart cartBrown"></div>
                 </button>
               </div>
             </div>
