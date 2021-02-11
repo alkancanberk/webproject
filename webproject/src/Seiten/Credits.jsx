@@ -8,13 +8,13 @@ const Credits = () =>{
           Diese Website und die hier vorgestellten Produkte, dienen für eine
           Projektarbeit an der DHBW Mannheim für das Fach Web-Development.
         </div>
-      
+
         <h3 className="creditsLayoutTagTwo">Quellen:</h3>
         <li className="creditsSource">
           Für die Produktbilder https://www.roastmarket.de
         </li>
         <li className="creditsSource">
-          Für verwendeten Icons https://fontawesome.com
+          Für die verwendeten Icons https://fontawesome.com
         </li>
         <li className="creditsLinks">
           https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/s/p/speicherstadt-brasilien-doce-diamantina-250g-front.jpg,

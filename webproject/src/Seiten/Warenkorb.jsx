@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Warenkorb(props) {
   const items = props.cartLists;
 
-  //deleteItem entfernt mit bei einem onClick die komplette Anzahl des Artikel das im Warenkorb befindlich ist
+  //deleteItem entfernt bei einem onClick die komplette Anzahl der Artikel die im Warenkorb befindlich sind
   const deleteItem = (itemToDelete) => {
     props.setCarts(items.filter((item) => item !== itemToDelete));
   };
@@ -43,7 +43,7 @@ export default function Warenkorb(props) {
     <>
       <div>
         <div>
-          {/*Sollte der Warenkorb leer sein also items.length === 0, so wird der nachfolgende Text angezeigt*/ }
+          {/*Sollte der Warenkorb leer sein also items.length === 0, so wird der nachfolgende Text angezeigt*/}
           {items.length === 0 && (
             <div className="cartEmpty">
               <div className="cartEmptyTag">Der Warenkorb ist leer!😜</div>
@@ -60,6 +60,7 @@ export default function Warenkorb(props) {
             </div>
           )}
         </div>
+        {/*Wird angezeigt wenn sich Artikel im Warenkorb befinden*/}
         {items.length !== 0 && (
           <>
             <header className="cartHeader">
@@ -106,6 +107,7 @@ export default function Warenkorb(props) {
             </div>
           ))}
         </div>
+        {/*Wird angezeigt wenn sich Artikel im Warenkorb befinden*/}
         {items.length !== 0 && (
           <>
             <hr className="cartLine"></hr>

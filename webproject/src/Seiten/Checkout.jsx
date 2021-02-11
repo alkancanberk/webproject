@@ -4,6 +4,7 @@ import './Checkout.css'
 
 
 
+//Klasse welche ein Kontaktformular und eine Warenkorb Zusammenfassung zurückgibt
 export default class Checkout extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +36,6 @@ export default class Checkout extends Component {
       displayContent: !this.state.displayContent, //entspricht dem Gegenteil von this.state.displayContent => also "true"
     });
   }
-  
   render() {
     //Funktion zum Anzeigen des Gesamtpreises
     var addTotal = this.items.reduce(function (accumulator, currentValue) {
@@ -45,106 +45,143 @@ export default class Checkout extends Component {
     const { displayContent } = this.state;
     return (
       <div>
-        <div className="checkoutContainer">
-          <div className="checkoutInfo">
-            <div>
-              <div className="buttonLayout">
-                <button
-                  className="moreDetailsButton"
-                  onClick={this.clickContent}
-                >
-                  <div>
-                    <div>Bestelldetails</div>
-                    <div className="fas fa-angle-double-down check"></div>
-                  </div>
-                </button>
+        <div>
+          {/*Sollte der Warenkorb bzw. hier Checkout leer sein also this.items.length === 0, so wird der nachfolgende Text angezeigt*/}
+          {this.items.length === 0 && (
+            <div className="cartEmpty">
+              <div className="cartEmptyTag">Der Warenkorb ist leer!😜</div>
+              <div className="cartEmptyTag">
+                Drück mich!
+                <div className="fas fa-angle-double-down emptyArrow"></div>
               </div>
-              {displayContent === true ? (
-                <div  className = "buttonBox">
-                  <div className="checkoutArticle">Artikel:</div>
-                  {this.items.map((item, key) => (
-                    <div className="checkoutContent" key={key}>
-                      <div className="checkoutName">{item.name}</div>
-                      <div className="checkoutPrice">{item.price} €</div>
-                      <div className="checkoutCount">x {item.count}</div>
-                    </div>
-                  ))}
-                  <div className="checkoutHeader">
-                    <div className="checkoutSum">
-                      Summe: {addTotal.toFixed(2)} €
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
+              <Link to="/produkte" className="cartEmptyImage">
+                <img
+                  className="cartEmptyImage"
+                  src="https://thumbs.dreamstime.com/b/traurige-tasse-kaffee-karikatur-43151368.jpg"
+                />
+              </Link>
             </div>
-
-            <form className="formLayout">
-              <h4>Bitte Formular ausfüllen:</h4>
-              <div className="checkoutFormOne">
-                <div>
-                  <input
-                    className="checkoutLayer"
-                    name="Vorname"
-                    placeholder="Vorname"
-                    value={this.state.Vorname}
-                    onChange={(event) => this.replace(event)}
-                  />
-                </div>
-                <div>
-                  <input
-                    className="checkoutLayer"
-                    name="Nachname"
-                    placeholder="Nachname"
-                    value={this.state.Nachname}
-                    onChange={(event) => this.replace(event)}
-                  />
-                </div>
-              </div>
-
-              <div className="checkoutFormTwo">
-                <div>
-                  <input
-                    className="checkoutLayer"
-                    name="Ort"
-                    placeholder="Ort"
-                    value={this.state.Ort}
-                    onChange={(event) => this.replace(event)}
-                  />
-                </div>
-                <div>
-                  <input
-                    className="checkoutLayer"
-                    name="StraßeHausnummer"
-                    placeholder="Straße und Hausnummer"
-                    value={this.state.StraßeHausnummer}
-                    onChange={(event) => this.replace(event)}
-                  />
-                </div>
-              </div>
-
-              <div className="checkoutFormThree">
-                <div>
-                  <input
-                    className="checkoutLayer"
-                    name="Email"
-                    placeholder="E-Mail"
-                    value={this.state.Mail}
-                    onChange={(event) => this.replace(event)}
-                  />
-                </div>
-                <div className="checkoutButton">
-                  <Link to="/">
-                    <button className="checkoutSubmit">
-                      <div class="fas fa-check"></div>
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </form>
-          </div>
+          )}
         </div>
+        {/*Ansonsten wird der normale Checkout angezeigt*/}
+        {this.items.length !== 0 && (
+          <>
+            <div className="checkoutContainer">
+              <div className="checkoutInfo">
+                <div>
+                  <div className="buttonLayout">
+                    <button
+                      className="moreDetailsButton"
+                      onClick={this.clickContent}
+                    >
+                      <div>
+                        <div>Bestelldetails</div>
+                        <div className="fas fa-angle-double-down check"></div>
+                      </div>
+                    </button>
+                  </div>
+                  {displayContent === true ? (
+                    <div className="buttonBox">
+                      <div className="checkoutArticle">Artikel:</div>
+                      {this.items.map((item, key) => (
+                        <div className="checkoutContent" key={key}>
+                          <div className="checkoutName">{item.name}</div>
+                          <div className="checkoutPrice">{item.price} €</div>
+                          <div className="checkoutCount">x {item.count}</div>
+                        </div>
+                      ))}
+                      <div className="checkoutHeader">
+                        <div className="checkoutSum">
+                          Summe: {addTotal.toFixed(2)} €
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                <form className="formLayout">
+                  <h4>Bitte Formular ausfüllen:</h4>
+                  <div className="checkoutFormOne">
+                    <div>
+                      <input
+                        className="checkoutLayer"
+                        name="Vorname"
+                        type="text"
+                        required
+                        placeholder="Vorname"
+                        value={this.state.Vorname}
+                        onChange={(event) => this.replace(event)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        className="checkoutLayer"
+                        name="Nachname"
+                        type="text"
+                        required
+                        placeholder="Nachname"
+                        value={this.state.Nachname}
+                        onChange={(event) => this.replace(event)}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="checkoutFormTwo">
+                    <div>
+                      <input
+                        className="checkoutLayer"
+                        name="Ort"
+                        type="text"
+                        required
+                        placeholder="Ort"
+                        value={this.state.Ort}
+                        onChange={(event) => this.replace(event)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        className="checkoutLayer"
+                        name="StraßeHausnummer"
+                        type="text"
+                        required
+                        placeholder="Straße und Hausnummer"
+                        value={this.state.StraßeHausnummer}
+                        onChange={(event) => this.replace(event)}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="checkoutFormThree">
+                    <div>
+                      <input
+                        className="checkoutLayer"
+                        type="email"
+                        x-moz-errormessage="Please specify a valid email address."
+                        name="Email"
+                        required
+                        placeholder="E-Mail"
+                        value={this.state.Mail}
+                        onChange={(event) => this.replace(event)}
+                      />
+                    </div>
+                    <div>
+                      <button className="checkoutSubmit">
+                        <input
+                          type="submit"
+                          value="Submit"
+                          className="checkoutSubmit"
+                          required
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   }

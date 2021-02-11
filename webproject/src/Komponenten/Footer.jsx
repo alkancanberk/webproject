@@ -6,12 +6,12 @@ import "./Footer.css";
 
 const Footer = () => {
   let location = useLocation()
-  let a = location.pathname
+  let loc = location.pathname
   return (
     <div>
       {" "}
       {/*Footer soll nur auf der Produktseite angezeigt werden*/}
-      {a === "/produkte" && (
+      {loc === "/produkte" && (
         <footer className="footer">
           <ul className="footerUL">
             <li className="footerComponent">

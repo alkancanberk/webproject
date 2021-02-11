@@ -12,7 +12,7 @@ const Navbar = (props) => {
 
   return (
     <nav className="navbar">
-      <div className="logo">
+      <div className="navLogo">
         <Link to="/" className="fas fa-coffee logoBrown"></Link>
         <h4>Kaffeetastisch</h4>
       </div>

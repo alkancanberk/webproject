@@ -1,22 +1,14 @@
-.service_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-}
-
-
 .service_layout{
     display: grid;
     text-align: center;
     width: 500px;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: center;
+    margin-left: auto;
+    margin-right: auto;  
 }
 
 
 .service_header{
-    text-align: center;
     margin-top: 3rem;
     font-style: italic;
     font-weight: bold;
@@ -26,7 +18,6 @@
 
 
 .service_content{
-    text-align: center;
     font-size: x-large;
     margin: 20px;
     font-style: italic;

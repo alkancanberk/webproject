@@ -25,7 +25,7 @@ export function Button(props) {
   return (
     <Link to="/warenkorb">
       <button className="counterbutton">
-        <div className="fas fa-shopping-cart">
+        <div className="fas fa-shopping-cart blackLogo">
           <div class="cartCounter">{Counter(ItemInCartCounter)}</div>
         </div>
         Warenkorb

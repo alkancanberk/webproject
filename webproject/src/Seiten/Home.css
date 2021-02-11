@@ -19,7 +19,6 @@
     color: white;
     font-weight: bold;
     letter-spacing:3px;
-    text-shadow: -3px 0  #8B4513, 0 3px  #8B4513, 3px 0  #8B4513, 0 -3px  #8B4513;
 }
 
 
@@ -29,7 +28,6 @@
     font-weight: lighter;
     text-align: center;
     letter-spacing: 4px;
-    text-shadow: -3px 0  #8B4513, 0 3px  #8B4513, 3px 0  #8B4513, 0 -3px  #8B4513;
 }
 
 .homeTitle p {
@@ -38,7 +36,6 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 50px;
-    text-shadow: -3px 0  #8B4513, 0 3px  #8B4513, 3px 0  #8B4513, 0 -3px  #8B4513;
 }
 
 

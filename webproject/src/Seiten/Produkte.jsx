@@ -8,6 +8,7 @@ function Produkte(props) {
   const items = props.productLists;
   const cartList = props.cartLists;
 
+  //Funktion um Artikel in den Warenkorb zu speichern
   const addToCart = (itemToCheck) => {
     //Kopie der Liste wird erstellt um im Folgenden bearbeitet werden zu können
     let newCartItems = [...cartList];
@@ -17,7 +18,7 @@ function Produkte(props) {
     );
 
     if (newItemIndex < 0) {
-      newCartItems.push({ ...itemToCheck, count: 1 }); 
+      newCartItems.push({ ...itemToCheck, count: 1 });
       //Sollte der Index kleiner 0 für dieses bestimmte Item sein (also nicht gefunden), so wird es hinzugefügt
     } else {
       const newItem = {
@@ -50,7 +51,7 @@ function Produkte(props) {
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
                   </div>
-                  <div className="cardRating">Bewertungen</div>
+                  <div className="cardRating">Premium Kaffee</div>
                 </div>
                 <button className="cardButton" onClick={() => addToCart(item)}>
                   <div className="fas fa-shopping-cart cartBrown"></div>
