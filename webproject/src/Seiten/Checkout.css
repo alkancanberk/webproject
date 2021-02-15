@@ -1,8 +1,7 @@
 .checkoutContainer{
     display:grid;
-    background: rgb(92, 58, 33);
-    grid-template-rows: minmax(100vh, 1fr);
-    max-height: 92vh;
+    background-color: rgb(92, 58, 33);
+    min-height: 92vh;
 }
 
 
@@ -19,6 +18,7 @@
     grid-template-columns: center;
     margin-left: auto;
     margin-right: auto;  
+    background-color: rgb(158, 100, 58);
 }
 
 
@@ -31,7 +31,6 @@
     display: flex;
     align-self: center;
     justify-content: center;
-
 }
 
 
@@ -67,7 +66,8 @@
 
 
 .formLayout{
-    margin-top: 6rem;
+    margin-top: 40px;
+    background: rgb(92, 58, 33);
 }
 
 
@@ -110,8 +110,6 @@ input, select, textarea{
 .checkoutFormThree{
     display: flex;
     justify-content: center;
-    
-
 }
 
 
@@ -126,29 +124,6 @@ input, select, textarea{
 }
 
 
-.checkoutSubmit{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    font-size: 2rem;
-    border-radius: 5px;
-    background-color: wheat;
-    border: 2px solid transparent;
-    color:  rgb(92, 58, 33);
-    cursor: pointer;
-    width: 14rem;
-    
-}
-
-
-.checkoutSubmit:hover{
-    border-radius: 5px;
-    background-color: transparent;
-    color: wheat;
-    border: 2px solid wheat;
-}
-
-
 .moreDetailsButton{
     display: grid;
     grid-template-columns: center;
@@ -159,6 +134,7 @@ input, select, textarea{
     outline: 0;
     cursor: pointer;
     background-color: wheat;
+    border: 1px solid transparent;
     font-size: 18px;
     padding: 8px 20px;
     border-radius: 20px;
@@ -168,16 +144,36 @@ input, select, textarea{
 
 .moreDetailsButton:hover{
     background-color: transparent;
-    color: wheat
+    color: wheat;
+    border: 1px solid wheat;
+    transition: 0.3s;
 }
 
 
-.check{
-    font-size: 20px;
+
+.checkoutSubmitLayout{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    overflow: hidden;
 }
 
 
+.checkoutSubmitButton{
+    font-size: medium;;
+    border-radius: 5px;
+    background-color: wheat;
+    border: 1px solid transparent;
+    color:  rgb(92, 58, 33);
+    cursor: pointer;
+    width: 11rem;
+}
 
 
-
-
+.checkoutSubmitButton:hover{
+    border-radius: 5px;
+    background-color: transparent;
+    color: wheat;
+    border: 1px solid wheat;
+    transition: 0.3s;
+}

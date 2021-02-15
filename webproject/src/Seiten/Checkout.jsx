@@ -20,6 +20,7 @@ export default class Checkout extends Component {
     Nachname: "",
     Ort: "",
     StraßeHausnummer: "",
+    Postleitzahl: "",
     Email: "",
   };
 
@@ -81,7 +82,7 @@ export default class Checkout extends Component {
                     </button>
                   </div>
                   {displayContent === true ? (
-                    <div className="buttonBox">
+                    <div className="checkoutButtonBox">
                       <div className="checkoutArticle">Artikel:</div>
                       {this.items.map((item, key) => (
                         <div className="checkoutContent" key={key}>
@@ -100,9 +101,9 @@ export default class Checkout extends Component {
                     ""
                   )}
                 </div>
-
+                {/*Kontaktformular*/}
                 <form className="formLayout">
-                  <h4>Bitte Formular ausfüllen:</h4>
+                  <h4>Bitte Kontaktformular ausfüllen:</h4>
                   <div className="checkoutFormOne">
                     <div>
                       <input
@@ -157,25 +158,36 @@ export default class Checkout extends Component {
                     <div>
                       <input
                         className="checkoutLayer"
-                        type="email"
-                        x-moz-errormessage="Please specify a valid email address."
-                        name="Email"
+                        type="text"
+                        name="Postleitzahl"
                         required
-                        placeholder="E-Mail"
-                        value={this.state.Mail}
+                        placeholder="Postleitzahl"
+                        value={this.state.Postleitzahl}
                         onChange={(event) => this.replace(event)}
                       />
                     </div>
                     <div>
-                      <button className="checkoutSubmit">
-                        <input
-                          type="submit"
-                          value="Submit"
-                          className="checkoutSubmit"
-                          required
-                        />
-                      </button>
+                      <input
+                        className="checkoutLayer"
+                        type="email"
+                        x-moz-errormessage="Bitte gebe eine gültige E-Mail-Adresse ein."
+                        name="Email"
+                        required
+                        placeholder="E-Mail"
+                        value={this.state.Email}
+                        onChange={(event) => this.replace(event)}
+                      />
                     </div>
+                  </div>
+                  <div className="checkoutSubmitLayout">
+                    <button className="checkoutSubmitButton">
+                      <input
+                        type="submit"
+                        value="Bestätigen"
+                        className="checkoutSubmitButton"
+                        required
+                      />
+                    </button>
                   </div>
                 </form>
               </div>

@@ -11,19 +11,19 @@ const productList = [
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/d/r/drago-mocambo-aroma-bio-fairtrade-250g.jpg",
     name: "Drago Mocambo Aroma Bio Fairtrade 250g",
-    price: Number(6).toFixed(2),
+    price: Number(6.40).toFixed(2),
   },
   {
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/s/p/speicherstadt-kaffeemischung-front.jpg",
     name: "Speicherstadt Kaffeemischung",
-    price: Number(7).toFixed(2),
+    price: Number(7.20).toFixed(2),
   },
   {
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/g/o/gorilla-impianto-250g-front.jpg",
     name: "Gorilla Espresso 250g",
-    price: Number(5).toFixed(2) ,
+    price: Number(5.20).toFixed(2) ,
   },
   {
     image:
@@ -47,7 +47,7 @@ const productList = [
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/d/r/drago-mocambo-brasilia-1kg-vorne.jpg",
     name: "Drago Mocambo Brasilia 1kg",
-    price: Number(15).toFixed(2),
+    price: Number(15.20).toFixed(2),
   },
   {
     image:
@@ -59,19 +59,19 @@ const productList = [
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/d/r/drago-mocambo-gran-bar-1kg-front_2.jpg",
     name: "Drago Mocambo Gran Bar 1kg",
-    price: Number(19).toFixed(2),
+    price: Number(19.20).toFixed(2),
   },
   {
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/d/r/drago-mocambo-suprema-1kg.jpg",
     name: "Drago Mocambo Suprema 1kg",
-    price: Number(17).toFixed(2),
+    price: Number(17.30).toFixed(2),
   },
   {
     image:
       "https://www.roastmarket.de/media/catalog/product/cache/1/small_image/235x353/9df78eab33525d08d6e5fb8d27136e95/m/u/murnauer-little-flower--indien-250g_1.jpg",
-    name: "1Murnauer Little Flower Indien",
-    price: Number(7).toFixed(2),
+    name: "Murnauer Little Flower Indien",
+    price: Number(7.80).toFixed(2),
   },
 ];
 

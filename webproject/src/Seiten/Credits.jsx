@@ -55,6 +55,9 @@ const Credits = () =>{
         <li className="creditsLinks">
           https://thumbs.dreamstime.com/b/traurige-tasse-kaffee-karikatur-43151368.jpg
         </li>
+        <li className="creditsLinks">
+          https://cdn.wallpapersafari.com/99/74/Pa5b4Y.jpg
+        </li>
       </div>
     );
 }
